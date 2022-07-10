@@ -6,7 +6,7 @@
 /*   By: jonsanch <jonsanch@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 17:40:36 by jonsanch          #+#    #+#             */
-/*   Updated: 2022/07/09 17:56:39 by jonsanch         ###   ########.fr       */
+/*   Updated: 2022/07/10 02:20:17 by jonsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	top1build(char	*str, int arr[][4])
 	i = 0;
 	while (i < 4)
 	{
-		if (str[i] == 0)
+		if (str[i] == 1)
 		{
-			arr[0][i + 1] = 4;
+			arr[0][i] = 4;
 		}
 	i++;
 	}
@@ -35,7 +35,7 @@ int	bot1build(char	*str, int arr[][4])
 	i = 4;
 	while (i < 8)
 	{
-		if (str[i] == 0)
+		if (str[i] == 1)
 		{
 			arr[3][i - 4] = 4;
 		}
@@ -51,7 +51,7 @@ int	left1build(char	*str, int arr[][4])
 	i = 8;
 	while (i < 12)
 	{
-		if (str[i] == 0)
+		if (str[i] == 1)
 		{
 			arr[0][i - 8] = 4;
 		}
@@ -67,9 +67,9 @@ int	right1build(char	*str, int arr[][4])
 	i = 12;
 	while (i < 16)
 	{
-		if (str[i] == 0)
+		if (str[i] == 1)
 		{
-			arr[i - 12][3] = 4;
+			arr[3][i - 12] = 4;
 		}
 	i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: jonsanch <jonsanch@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 15:06:09 by jonsanch          #+#    #+#             */
-/*   Updated: 2022/07/09 18:33:52 by jonsanch         ###   ########.fr       */
+/*   Updated: 2022/07/10 02:17:27 by jonsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	bot4build(char	*str, int arr[][4])
 	return 0;
 }
 
-int	right4build(char	*str, int arr[][4])
+int	left4build(char	*str, int arr[][4])
 {
 	int	i;
 
@@ -60,10 +60,10 @@ int	right4build(char	*str, int arr[][4])
 	{
 		if (str[i] == 4)
 		{
-			arr[i - 8][3] = 4;
-			arr[i - 8][2] = 3;
-			arr[i - 8][1] = 2;
-			arr[i - 8][0] = 1;
+			arr[3][i - 8] = 4;
+			arr[2][i - 8] = 3;
+			arr[1][i - 8] = 2;
+			arr[0][i - 8] = 1;
 			printf("a");
 		}
 	i++;
@@ -71,7 +71,7 @@ int	right4build(char	*str, int arr[][4])
 	return 0;
 }
 
-int	left4build(char	*str, int arr[][4])
+int	right4build(char	*str, int arr[][4])
 {
 	int	i;
 
@@ -80,10 +80,10 @@ int	left4build(char	*str, int arr[][4])
 	{
 		if (str[i] == 4)
 		{
-			arr[i - 12][3] = 1;
-			arr[i - 12][2] = 2;
-			arr[i - 12][1] = 3;
-			arr[i - 12][0] = 4;
+			arr[3][i - 12] = 1;
+			arr[2][i - 12] = 2;
+			arr[1][i - 12] = 3;
+			arr[0][i - 12] = 4;
 		}
 	i++;
 	}
@@ -94,6 +94,6 @@ void	fourbuild(char *str, int arr[][4])
 {
 	top4build(str, arr);
 	bot4build(str, arr);
-	right4build(str, arr);
 	left4build(str, arr);
+	right4build(str, arr);
 }
